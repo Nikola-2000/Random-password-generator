@@ -8,6 +8,21 @@
 	<title>Password Generator</title>
 	<style>
 
+		@media only screen and (max-width: 768px){
+			.container-fluid{
+				width: 95% !important;
+			}
+			#generate{
+				margin-left: 25%;
+			}
+			#pass_strong{
+				width: 85% !important;
+			}
+			#table_hr{
+				width: 100% !important;
+			}
+		}
+
 		@media (prefers-color-scheme:  light){
 
 			body{
@@ -62,17 +77,18 @@
 		<p id="result"></p>
 	</div>
 	<div class="row justify-content-md-center">
-		<button class="btn btn-outline-primary" style="width: 50%; font-size:25px" onclick="generate()">Generate</button>
+		<button id="generate" class="btn btn-outline-primary" style="width: 50%; font-size:25px" onclick="generate()">Generate</button>
 	</div>
 	<br>
 	<br>
 	<h4>What makes a password strong?</h4>
 	<div class="container">
-	<hr style="width:45%">
+	<hr style="width:45%" id="pass_strong">
 	<p>The key aspects of a strong password are length (the longer the better); a mix of letters (upper and lower case), numbers, and symbols, no ties to your personal information, and no dictionary words. The good news is you don’t have to memorize awful strings of random letters numbers and symbols in order to incorporate all of these aspects into your passwords. You simply need a few tricks</p>
 	<h5>The time it takes a hacker to brute force your password in 2022</h5>
-	<hr style="width:80%">
+	<hr style="width:80%" id="table_hr">
 	<br>
+	<div class="table-responsive">
 	  <!--<table class="table table-hover table-dark table-sm">-->
 	  <table class="table table-hover">
 	  <thead class="table-dark">
@@ -209,6 +225,7 @@
 	    </tr>
 	  </tbody>
 	  </table>
+	</div>
 	  <br>
 	</div>
 
