@@ -1,1 +1,1 @@
-# Random-password-generator
+# Strong random password generator using JavaScript.
